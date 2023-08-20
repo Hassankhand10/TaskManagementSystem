@@ -1,0 +1,14 @@
+<div class="task-list-container" cdkDropList (cdkDropListDropped)="onTaskDrop($event)">
+    <div class="task-item" *ngFor="let task of getTasks()" [@fadeIn] cdkDrag>
+      <h2>{{ task.title }}</h2>
+      <p class="created-by">Created by: {{ task.createdBy }}</p>
+      <p class="description">{{ task.description }}</p>
+      <div class="task-buttons">
+        <button (click)="markStatus(task)" [class.completed]="task.isCompleted" [class.incomplete]="!task.isCompleted">
+          {{ task.isCompleted ? "Mark as Incomplete" : "Mark as Completed" }}
+        </button>
+        <button (click)="deleteTask(task)" class="delete">Delete</button>
+      </div>
+    </div>
+  </div>
+  
