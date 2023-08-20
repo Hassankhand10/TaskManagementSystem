@@ -5,7 +5,7 @@ This project includes a login page, a home page with drag-and-drop functionality
 ## Installation
 
 1. Clone the repository:
-2. 2. Go to the project directory:
+2. Go to the project directory:
 3. Install the required dependencies:
 
    
